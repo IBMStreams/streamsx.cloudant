@@ -1,1 +1,1 @@
-This folder contains doc to io.page
+Please remove the "doc" folder.  It was created by mistake.
