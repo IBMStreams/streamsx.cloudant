@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Operator ScanChanges"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="spldoc_operator"/>
+<link rel="stylesheet" type="text/css" href="../../html/commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../html/spldoc.css"/>
+<title>Operator ScanChanges</title>
+</head>
+<body id="spldoc_operator">
+
+
+<h1 class="title topictitle1">Operator <tt class="ph tt">ScanChanges</tt></h1>
+
+<div class="body refbody">
+<div class="section">
+<p class="p">
+<a class="xref" href="../toolkits/toolkits.html">IBMStreams streamsx.cloudant Toolkit</a> &gt; <a class="xref" href="tk$com.ibm.streamsx.cloudant.html">com.ibm.streamsx.cloudant 0.1.0</a> &gt; <a class="xref" href="ns$com.ibm.streamsx.cloudant.html">com.ibm.streamsx.cloudant</a> &gt; ScanChanges</p>
+
+</div>
+
+<div class="section splprimop">
+  <embed class="image" src="../../image/tk$com.ibm.streamsx.cloudant/op$com.ibm.streamsx.cloudant$ScanChanges.svg" width="872" height="112"/>
+</div>
+
+<div class="section">
+
+<p class="p">This operator uses the Cloudant changes API to get all changes made to documents in the database.
+</p>
+
+</div>
+
+<div class="section"><h2 class="title sectiontitle splhead-1">Summary</h2>
+
+<dl class="dl" compact="compact">
+ 
+  <dt class="dt dlterm">Ports</dt>
+
+  <dd class="dd">This operator has 0 input ports and 1 output port.</dd>
+
+ 
+ 
+  <dt class="dt dlterm">Windowing</dt>
+
+  <dd class="dd">This operator does not accept any windowing configurations.</dd>
+
+ 
+ 
+  <dt class="dt dlterm">Parameters</dt>
+
+  <dd class="dd">This operator supports 18 parameters.
+<p class="p"> Optional: 
+<a class="xref" href="#spldoc_operator__parameter__IAMApiKey">IAMApiKey</a>, <a class="xref" href="#spldoc_operator__parameter__appConfigName">appConfigName</a>, <a class="xref" href="#spldoc_operator__parameter__databaseName">databaseName</a>, <a class="xref" href="#spldoc_operator__parameter__documentDataAttribute">documentDataAttribute</a>, <a class="xref" href="#spldoc_operator__parameter__documentFilter">documentFilter</a>, <a class="xref" href="#spldoc_operator__parameter__documentIdAttribute">documentIdAttribute</a>, <a class="xref" href="#spldoc_operator__parameter__documentRevisionAttribute">documentRevisionAttribute</a>, <a class="xref" href="#spldoc_operator__parameter__documentSequenceValueAttribute">documentSequenceValueAttribute</a>, <a class="xref" href="#spldoc_operator__parameter__errorCodeAttribute">errorCodeAttribute</a>, <a class="xref" href="#spldoc_operator__parameter__isDeletedAttribute">isDeletedAttribute</a>, <a class="xref" href="#spldoc_operator__parameter__password">password</a>, <a class="xref" href="#spldoc_operator__parameter__preservePunctuation">preservePunctuation</a>, <a class="xref" href="#spldoc_operator__parameter__resetSequenceValueDocument">resetSequenceValueDocument</a>, <a class="xref" href="#spldoc_operator__parameter__sequenceValueDocumentId">sequenceValueDocumentId</a>, <a class="xref" href="#spldoc_operator__parameter__startSequenceValue">startSequenceValue</a>, <a class="xref" href="#spldoc_operator__parameter__startSequenceValueMode">startSequenceValueMode</a>, <a class="xref" href="#spldoc_operator__parameter__url">url</a>, <a class="xref" href="#spldoc_operator__parameter__username">username</a>
+
+</p>
+</dd>
+
+ 
+ 
+  <dt class="dt dlterm">Metrics</dt>
+
+  <dd class="dd">This operator does not report any metrics.</dd>
+
+ 
+</dl>
+</div>
+
+<div class="section"><h2 class="title sectiontitle splhead-1">Properties</h2>
+
+<dl class="dl" compact="compact">
+ 
+  <dt class="dt dlterm">Implementation</dt>
+
+  <dd class="dd">Java</dd>
+
+ 
+</dl>
+
+</div>
+
+<div class="section">
+<p class="p splhead-1"><strong class="ph b"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__output_port_set">Output Ports</a></strong></p>
+<dl class="dl">
+  
+     <dt class="dt dlterm">Assignments</dt>
+
+       <dd class="dd">Java operators do not support output assignments.
+       </dd>
+
+  
+</dl>
+
+<dl class="dl">
+  
+   <dt class="dt dlterm">Ports (0)</dt>
+
+   <dd class="dd">
+
+<p class="p">This output port gets one tuple for each database change, containing the docuemnt id and optionally the content.
+</p>
+
+<p class="p"/>
+
+   <dl class="dl">
+    
+      <dt class="dt dlterm">Properties</dt>
+
+      <dd class="dd">
+   <ul class="sl simple">
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__output_port_set__optional">Optional</a>: false
+     </li>
+
+   </ul>
+
+   <ul class="sl simple">
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__output_port_set__windowpunctuationoutputmode">WindowPunctuationOutputMode</a>: Generating
+     </li>
+
+   </ul>
+
+      </dd>
+
+    
+   </dl>
+
+   <p class="p"/>
+
+   </dd>
+
+  
+</dl>
+
+</div>
+
+<div class="section">
+<p class="p splhead-1"><strong class="ph b"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters">Parameters</a></strong></p>
+This operator supports 18 parameters.
+<p class="p"> Optional: 
+<a class="xref" href="#spldoc_operator__parameter__IAMApiKey">IAMApiKey</a>, <a class="xref" href="#spldoc_operator__parameter__appConfigName">appConfigName</a>, <a class="xref" href="#spldoc_operator__parameter__databaseName">databaseName</a>, <a class="xref" href="#spldoc_operator__parameter__documentDataAttribute">documentDataAttribute</a>, <a class="xref" href="#spldoc_operator__parameter__documentFilter">documentFilter</a>, <a class="xref" href="#spldoc_operator__parameter__documentIdAttribute">documentIdAttribute</a>, <a class="xref" href="#spldoc_operator__parameter__documentRevisionAttribute">documentRevisionAttribute</a>, <a class="xref" href="#spldoc_operator__parameter__documentSequenceValueAttribute">documentSequenceValueAttribute</a>, <a class="xref" href="#spldoc_operator__parameter__errorCodeAttribute">errorCodeAttribute</a>, <a class="xref" href="#spldoc_operator__parameter__isDeletedAttribute">isDeletedAttribute</a>, <a class="xref" href="#spldoc_operator__parameter__password">password</a>, <a class="xref" href="#spldoc_operator__parameter__preservePunctuation">preservePunctuation</a>, <a class="xref" href="#spldoc_operator__parameter__resetSequenceValueDocument">resetSequenceValueDocument</a>, <a class="xref" href="#spldoc_operator__parameter__sequenceValueDocumentId">sequenceValueDocumentId</a>, <a class="xref" href="#spldoc_operator__parameter__startSequenceValue">startSequenceValue</a>, <a class="xref" href="#spldoc_operator__parameter__startSequenceValueMode">startSequenceValueMode</a>, <a class="xref" href="#spldoc_operator__parameter__url">url</a>, <a class="xref" href="#spldoc_operator__parameter__username">username</a>
+
+</p>
+<dl class="dl">
+
+<dt class="dt dlterm"><a name="spldoc_operator__parameter__IAMApiKey"><!-- --></a><tt class="ph tt">IAMApiKey</tt></dt>
+
+<dd class="dd">
+<p class="p">The IAM API key for the user. If this parameter is specified, the password parameter is ignored.
+</p>
+<dl class="dl">
+
+ <dt class="dt dlterm">Properties </dt>
+
+ <dd class="dd">
+  <ul class="sl simple">
+  <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__type">Type</a>: rstring
+  </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__cardinality">Cardinality</a>: 1
+     </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__optional">Optional</a>: true
+     </li>
+
+  </ul>
+
+ </dd>
+
+
+</dl>
+
+</dd>
+
+
+
+<dt class="dt dlterm"><a name="spldoc_operator__parameter__appConfigName"><!-- --></a><tt class="ph tt">appConfigName</tt></dt>
+
+<dd class="dd">
+<p class="p">Specifies the name of the application configuration that contains Cloudant connection related configuration parameters. The keys in the application configuration have the same name as the operator parameters.The following keys are supported: url, username, password, databaseName.If a value is specified in the application configuration and as operator parameter, the operator parameter value takes precedence.
+</p>
+<dl class="dl">
+
+ <dt class="dt dlterm">Properties </dt>
+
+ <dd class="dd">
+  <ul class="sl simple">
+  <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__type">Type</a>: rstring
+  </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__cardinality">Cardinality</a>: 1
+     </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__optional">Optional</a>: true
+     </li>
+
+  </ul>
+
+ </dd>
+
+
+</dl>
+
+</dd>
+
+
+
+<dt class="dt dlterm"><a name="spldoc_operator__parameter__databaseName"><!-- --></a><tt class="ph tt">databaseName</tt></dt>
+
+<dd class="dd">
+<p class="p">The name of the database
+</p>
+<dl class="dl">
+
+ <dt class="dt dlterm">Properties </dt>
+
+ <dd class="dd">
+  <ul class="sl simple">
+  <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__type">Type</a>: rstring
+  </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__cardinality">Cardinality</a>: 1
+     </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__optional">Optional</a>: true
+     </li>
+
+  </ul>
+
+ </dd>
+
+
+</dl>
+
+</dd>
+
+
+
+<dt class="dt dlterm"><a name="spldoc_operator__parameter__documentDataAttribute"><!-- --></a><tt class="ph tt">documentDataAttribute</tt></dt>
+
+<dd class="dd">
+<p class="p">This parameter specifies the attribute name of the output tuple that gets the documents JSON content (type rstring). If not specified, the document is not included in the output tuple.
+</p>
+<dl class="dl">
+
+ <dt class="dt dlterm">Properties </dt>
+
+ <dd class="dd">
+  <ul class="sl simple">
+  <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__type">Type</a>: rstring
+  </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__cardinality">Cardinality</a>: 1
+     </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__optional">Optional</a>: true
+     </li>
+
+  </ul>
+
+ </dd>
+
+
+</dl>
+
+</dd>
+
+
+
+<dt class="dt dlterm"><a name="spldoc_operator__parameter__documentFilter"><!-- --></a><tt class="ph tt">documentFilter</tt></dt>
+
+<dd class="dd">
+<p class="p">Specify a JSON string that contains a filter for the documents to retrieve during scanning changes.
+</p>
+<dl class="dl">
+
+ <dt class="dt dlterm">Properties </dt>
+
+ <dd class="dd">
+  <ul class="sl simple">
+  <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__type">Type</a>: rstring
+  </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__cardinality">Cardinality</a>: 1
+     </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__optional">Optional</a>: true
+     </li>
+
+  </ul>
+
+ </dd>
+
+
+</dl>
+
+</dd>
+
+
+
+<dt class="dt dlterm"><a name="spldoc_operator__parameter__documentIdAttribute"><!-- --></a><tt class="ph tt">documentIdAttribute</tt></dt>
+
+<dd class="dd">
+<p class="p">This parameter specifies the name of the attribute in the output tuple that will receive the id of the changed docuemnt (JSON field _id). It is of type rstring. If not specified an attribute named 'id' is expected in the output tuple and will get the value.
+</p>
+<dl class="dl">
+
+ <dt class="dt dlterm">Properties </dt>
+
+ <dd class="dd">
+  <ul class="sl simple">
+  <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__type">Type</a>: rstring
+  </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__cardinality">Cardinality</a>: 1
+     </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__optional">Optional</a>: true
+     </li>
+
+  </ul>
+
+ </dd>
+
+
+</dl>
+
+</dd>
+
+
+
+<dt class="dt dlterm"><a name="spldoc_operator__parameter__documentRevisionAttribute"><!-- --></a><tt class="ph tt">documentRevisionAttribute</tt></dt>
+
+<dd class="dd">
+<p class="p">This parameter specifies the attribute name of the output tuple that gets the documents revision number (type rstring).  If not specified, the revision is not included in the output tuple.
+</p>
+<dl class="dl">
+
+ <dt class="dt dlterm">Properties </dt>
+
+ <dd class="dd">
+  <ul class="sl simple">
+  <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__type">Type</a>: rstring
+  </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__cardinality">Cardinality</a>: 1
+     </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__optional">Optional</a>: true
+     </li>
+
+  </ul>
+
+ </dd>
+
+
+</dl>
+
+</dd>
+
+
+
+<dt class="dt dlterm"><a name="spldoc_operator__parameter__documentSequenceValueAttribute"><!-- --></a><tt class="ph tt">documentSequenceValueAttribute</tt></dt>
+
+<dd class="dd">
+<p class="p">This parameter specifies the attribute name of the output tuple that gets the last sequnce number fetched from the changes source (type rstring). It is optional. This number can be used to restart the replication from a certain point.
+</p>
+<dl class="dl">
+
+ <dt class="dt dlterm">Properties </dt>
+
+ <dd class="dd">
+  <ul class="sl simple">
+  <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__type">Type</a>: rstring
+  </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__cardinality">Cardinality</a>: 1
+     </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__optional">Optional</a>: true
+     </li>
+
+  </ul>
+
+ </dd>
+
+
+</dl>
+
+</dd>
+
+
+
+<dt class="dt dlterm"><a name="spldoc_operator__parameter__errorCodeAttribute"><!-- --></a><tt class="ph tt">errorCodeAttribute</tt></dt>
+
+<dd class="dd">
+<p class="p">This parameter specifies the name of an output attribute in the output tuple that will hold error messages returned by the Cloudant database opration.
+</p>
+<dl class="dl">
+
+ <dt class="dt dlterm">Properties </dt>
+
+ <dd class="dd">
+  <ul class="sl simple">
+  <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__type">Type</a>: rstring
+  </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__cardinality">Cardinality</a>: 1
+     </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__optional">Optional</a>: true
+     </li>
+
+  </ul>
+
+ </dd>
+
+
+</dl>
+
+</dd>
+
+
+
+<dt class="dt dlterm"><a name="spldoc_operator__parameter__isDeletedAttribute"><!-- --></a><tt class="ph tt">isDeletedAttribute</tt></dt>
+
+<dd class="dd">
+<p class="p">This parameter specifies the name of the attribute in the output tuple that will receive the flag if the changed docuemnt was deleted. It is of type boolean. If not specified an attribute named 'iDeleted' is expected in the output tuple and will get the value.
+</p>
+<dl class="dl">
+
+ <dt class="dt dlterm">Properties </dt>
+
+ <dd class="dd">
+  <ul class="sl simple">
+  <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__type">Type</a>: rstring
+  </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__cardinality">Cardinality</a>: 1
+     </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__optional">Optional</a>: true
+     </li>
+
+  </ul>
+
+ </dd>
+
+
+</dl>
+
+</dd>
+
+
+
+<dt class="dt dlterm"><a name="spldoc_operator__parameter__password"><!-- --></a><tt class="ph tt">password</tt></dt>
+
+<dd class="dd">
+<p class="p">The password for the username.
+</p>
+<dl class="dl">
+
+ <dt class="dt dlterm">Properties </dt>
+
+ <dd class="dd">
+  <ul class="sl simple">
+  <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__type">Type</a>: rstring
+  </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__cardinality">Cardinality</a>: 1
+     </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__optional">Optional</a>: true
+     </li>
+
+  </ul>
+
+ </dd>
+
+
+</dl>
+
+</dd>
+
+
+
+<dt class="dt dlterm"><a name="spldoc_operator__parameter__preservePunctuation"><!-- --></a><tt class="ph tt">preservePunctuation</tt></dt>
+
+<dd class="dd">
+<p class="p">If set to true then the operator forwards punctuation from input port 0 to output port 0. The default value is false and a window punctuation is generated on output port 0 after object is read.
+</p>
+<dl class="dl">
+
+ <dt class="dt dlterm">Properties </dt>
+
+ <dd class="dd">
+  <ul class="sl simple">
+  <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__type">Type</a>: boolean
+  </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__cardinality">Cardinality</a>: 1
+     </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__optional">Optional</a>: true
+     </li>
+
+  </ul>
+
+ </dd>
+
+
+</dl>
+
+</dd>
+
+
+
+<dt class="dt dlterm"><a name="spldoc_operator__parameter__resetSequenceValueDocument"><!-- --></a><tt class="ph tt">resetSequenceValueDocument</tt></dt>
+
+<dd class="dd">
+<p class="p">If this value is set to 'true' the document used to track the sequence value is cleared out after application start.This is useful for debugging or if you want to start replication from scratch. Alternatively, the document can be deleted manually from the database, as this has the same effect.
+</p>
+<dl class="dl">
+
+ <dt class="dt dlterm">Properties </dt>
+
+ <dd class="dd">
+  <ul class="sl simple">
+  <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__type">Type</a>: boolean
+  </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__cardinality">Cardinality</a>: 1
+     </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__optional">Optional</a>: true
+     </li>
+
+  </ul>
+
+ </dd>
+
+
+</dl>
+
+</dd>
+
+
+
+<dt class="dt dlterm"><a name="spldoc_operator__parameter__sequenceValueDocumentId"><!-- --></a><tt class="ph tt">sequenceValueDocumentId</tt></dt>
+
+<dd class="dd">
+<p class="p">Specify the id of a document in the Cloudant database that is used to manage the sequence value (parameter 'since' in the CLoudant _changes API).If this parameter is set, the operator will track the sequence value in this document. On startup the initial sequence value is retrieved from this document.If the document does not exists in the datbase, it is created and populated with the sequence number as determined via the 'startSequenceValueMode' parameter.If the document does not exist and the parameter 'startSequenceValueMode' is set to 'fromDatabase' this is treated as an error and the operator throws an exception.On shutdown of the application the latest sequence value processed is stored in this document, so the replication can be continued at that point after an application restart.
+</p>
+<dl class="dl">
+
+ <dt class="dt dlterm">Properties </dt>
+
+ <dd class="dd">
+  <ul class="sl simple">
+  <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__type">Type</a>: rstring
+  </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__cardinality">Cardinality</a>: 1
+     </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__optional">Optional</a>: true
+     </li>
+
+  </ul>
+
+ </dd>
+
+
+</dl>
+
+</dd>
+
+
+
+<dt class="dt dlterm"><a name="spldoc_operator__parameter__startSequenceValue"><!-- --></a><tt class="ph tt">startSequenceValue</tt></dt>
+
+<dd class="dd">
+<p class="p">Specify the initial sequence value to use (parameter 'since' in the CLoudant _changes API).parameter 'startSequenceValueMode' needs to be set to 'fromParameter' for this parameter to take effect.
+</p>
+<dl class="dl">
+
+ <dt class="dt dlterm">Properties </dt>
+
+ <dd class="dd">
+  <ul class="sl simple">
+  <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__type">Type</a>: rstring
+  </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__cardinality">Cardinality</a>: 1
+     </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__optional">Optional</a>: true
+     </li>
+
+  </ul>
+
+ </dd>
+
+
+</dl>
+
+</dd>
+
+
+
+<dt class="dt dlterm"><a name="spldoc_operator__parameter__startSequenceValueMode"><!-- --></a><tt class="ph tt">startSequenceValueMode</tt></dt>
+
+<dd class="dd">
+<p class="p">Specify how the operator should start the replication (parameter 'since' in the CLoudant _changes API). The sequence value to start with can be specified in 4 ways.'all' use 0 as since value. This will fetch every change ever made to the database. Be cautious as this can result in overloading the application.'now' use the latest sequence value from the database. This will fetch changes occured after starting the Streams application.'fromParameter' you need to supply the desired sequence value in the operator parameter 'startSequenceValue'.'fromDatabase' the sequence value is stored in the source database itself, and managed by this operator. You need to supply the id of the document that will be used.The default value is 'all'
+</p>
+<dl class="dl">
+
+ <dt class="dt dlterm">Properties </dt>
+
+ <dd class="dd">
+  <ul class="sl simple">
+  <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__type">Type</a>: com.ibm.streamsx.cloudant.ScanChanges.StartSequenceValueMode
+ (<tt class="ph tt">all, now, fromParameter, fromDatabase</tt>)  </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__cardinality">Cardinality</a>: 1
+     </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__optional">Optional</a>: true
+     </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__expressionmode">ExpressionMode</a>: CustomLiteral
+     </li>
+
+  </ul>
+
+ </dd>
+
+
+</dl>
+
+</dd>
+
+
+
+<dt class="dt dlterm"><a name="spldoc_operator__parameter__url"><!-- --></a><tt class="ph tt">url</tt></dt>
+
+<dd class="dd">
+<p class="p">The base URL of the CLoudant REST API endpoint.
+</p>
+<dl class="dl">
+
+ <dt class="dt dlterm">Properties </dt>
+
+ <dd class="dd">
+  <ul class="sl simple">
+  <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__type">Type</a>: rstring
+  </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__cardinality">Cardinality</a>: 1
+     </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__optional">Optional</a>: true
+     </li>
+
+  </ul>
+
+ </dd>
+
+
+</dl>
+
+</dd>
+
+
+
+<dt class="dt dlterm"><a name="spldoc_operator__parameter__username"><!-- --></a><tt class="ph tt">username</tt></dt>
+
+<dd class="dd">
+<p class="p">The username used to authenticate against the database.
+</p>
+<dl class="dl">
+
+ <dt class="dt dlterm">Properties </dt>
+
+ <dd class="dd">
+  <ul class="sl simple">
+  <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__type">Type</a>: rstring
+  </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__cardinality">Cardinality</a>: 1
+     </li>
+
+     <li class="sli"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__parameters__parameter__optional">Optional</a>: true
+     </li>
+
+  </ul>
+
+ </dd>
+
+
+</dl>
+
+</dd>
+
+
+</dl>
+
+</div>
+
+<div class="section">
+<p class="p splhead-1"><strong class="ph b"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__context__dependencies">Libraries</a></strong></p>
+
+ <dl class="dl">
+ 
+  <dt class="dt dlterm">Operator class library
+  </dt>
+
+  <dd class="dd"/>
+
+  <dd class="dd"><a class="xref" href="../references/OperatorModel.html#spldoc_reference_operator_model__context__dependencies__managedlibrary__libpath">Library Path</a>: <tt class="ph tt">../../impl/lib/com.ibm.streamsx.cloudant.jar, ../../opt/downloaded/*</tt></dd>
+
+ 
+ </dl>
+
+</div>
+
+</div>
+
+
+</body>
+</html>
